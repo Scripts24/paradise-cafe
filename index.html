@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paradise Café</title>
+    <!--Font-awesome-->
+    <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
+    <!--Hoja de estilos-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <!--Header y nav-->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./img/logo.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="#products">Productos</a>
+            <a href="#review">Reseñas</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-cart-shopping" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Buscar...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./img/Cappuccino coffee.png" alt="">
+                <div class="content">
+                    <h3>Cart Item 1</h3>
+                    <div class="price">$16</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./img/Cappuccino coffee.png" alt="">
+                <div class="content">
+                    <h3>Cart Item 2</h3>
+                    <div class="price">$16</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </header>
+
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

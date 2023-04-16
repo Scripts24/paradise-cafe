@@ -36,7 +36,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius   : 5rem;
 }
 
@@ -46,6 +46,51 @@ body {
 
 section {
     padding: 2rem 7%;
+}
+
+/* PROGRESO SCROLL */
+
+.progress-bar {
+    position  : fixed;
+    width     : 100%;
+    height    : 0.75rem;
+    top       : 0;
+    z-index   : 100;
+    background: var(--bg);
+}
+
+.progress {
+    width     : 0%;
+    height    : 100%;
+    background: var(--main-color);
+}
+
+/* BOTÓN SUBIR JS */
+
+#top-progress {
+    position     : fixed;
+    bottom       : 1.25rem;
+    right        : 0.625rem;
+    height       : 4.4rem;
+    width        : 4.4rem;
+    display      : none;
+    place-items  : center;
+    border-radius: 50%;
+    box-shadow   : 0 0 0.625rem var(--black);
+    cursor       : pointer;
+    z-index      : 100;
+}
+
+#progress-value {
+    display         : block;
+    height          : calc(100% - .9rem);
+    width           : calc(100% - .9rem);
+    background-color: var(--main-color);
+    border-radius   : 50%;
+    display         : grid;
+    place-items     : center;
+    font-size       : 2.2rem;
+    color           : var(--bg);
 }
 
 .heading {
@@ -85,14 +130,14 @@ section {
     padding        : 1rem 7%;
     border-bottom  : var(--border);
     position       : fixed;
-    top            : 0;
+    top            : 0.75rem;
     left           : 0;
     right          : 0;
     z-index        : 1000;
 }
 
 .header .logo img {
-    height: 12rem;
+    height: 11.8rem;
 }
 
 .header .navbar a {

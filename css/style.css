@@ -44,19 +44,35 @@ body {
     background: var(--bg);
 }
 
-/*HEADER*/
-
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    padding: .9rem 3rem;
-    font-size: 1.7rem;
-    color: #fff;
-    background: var(--main-color) ;
-    cursor: pointer;
+section {
+    padding: 2rem 7%;
 }
 
-.btn:hover{
+.heading {
+    text-align    : center;
+    color         : #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size     : 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+/*HEADER*/
+
+.btn {
+    margin-top: 1rem;
+    display   : inline-block;
+    padding   : .9rem 3rem;
+    font-size : 1.7rem;
+    color     : #fff;
+    background: var(--main-color);
+    cursor    : pointer;
+}
+
+.btn:hover {
     letter-spacing: .2rem;
 }
 
@@ -143,60 +159,131 @@ body {
     color: var(--main-color);
 }
 
-.header .cart-items-container{
+.header .cart-items-container {
     position  : absolute;
     top       : 100%;
     right     : -100%;
     background: #fff;
     width     : 35rem;
     height    : calc(100vh - 9.5rem);
-    padding: 0 1.5rem;
+    padding   : 0 1.5rem;
 }
 
-.header .cart-items-container.active{
+.header .cart-items-container.active {
     right: 0;
 }
 
-.header .cart-items-container .cart-item{
-    position: relative;
-    margin: 2rem 0;
-    display: flex;
+.header .cart-items-container .cart-item {
+    position   : relative;
+    margin     : 2rem 0;
+    display    : flex;
     align-items: center;
-    gap: 1.5rem;
+    gap        : 1.5rem;
 }
 
-.header .cart-items-container .cart-item .fa-times{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+.header .cart-items-container .cart-item .fa-times {
+    position : absolute;
+    top      : 1rem;
+    right    : 1rem;
     font-size: 2rem;
-    cursor: pointer;
-    color: var(--black);
+    cursor   : pointer;
+    color    : var(--black);
 }
 
-.header .cart-items-container .cart-item .fa-times:hover{
+.header .cart-items-container .cart-item .fa-times:hover {
     color: var(--main-color);
 }
 
-.header .cart-items-container .cart-item img{
+.header .cart-items-container .cart-item img {
     height: 7rem;
 }
 
-.header .cart-items-container .cart-item .content h3{
-    font-size: 2rem;
-    color: var(--black);
+.header .cart-items-container .cart-item .content h3 {
+    font-size     : 2rem;
+    color         : var(--black);
     padding-bottom: .5rem;
 }
 
-.header .cart-items-container .cart-item .content .price{
+.header .cart-items-container .cart-item .content .price {
     font-size: 1.5rem;
-    color: var(--main-color);
+    color    : var(--main-color);
 }
 
-.header .cart-items-container .btn{
-    width: 100%;
+.header .cart-items-container .btn {
+    width     : 100%;
     text-align: center;
 }
+
+/*INICIO*/
+
+.home {
+    min-height         : 100vh;
+    display            : flex;
+    align-items        : center;
+    background         : url(../img/banner.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h2 {
+    font-size     : 6rem;
+    text-transform: uppercase;
+    color         : var(--main-color);
+}
+
+.home .content p {
+    font-size  : 3.5rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding    : 1rem 0;
+    color      : #eee;
+}
+
+.home .content .btn {
+    align-items: center;
+}
+
+/*NOSOTROS*/
+
+.about .row {
+    display    : flex;
+    align-items: center;
+    background : var(--black);
+    flex-wrap  : wrap;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex   : 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color    : #fff;
+}
+
+.about .row .content p {
+    font-size  : 1.6rem;
+    color      : #ccc;
+    padding    : 1rem 0;
+    line-height: 1.8;
+}
+
+
+
+
 
 
 
@@ -212,6 +299,10 @@ body {
 
     .header {
         padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
     }
 
 }
@@ -246,6 +337,16 @@ body {
     .header .search-form {
         width: 90%;
         right: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content    : center;
+        text-align         : center
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
     }
 }
 

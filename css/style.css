@@ -105,6 +105,17 @@ section {
     color: var(--main-color);
 }
 
+/*EFECTO SKEW */
+
+.skew-under {
+    position    : absolute;
+    bottom      : 0;
+    left        : 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent var(--bg) transparent;
+}
+
 /*HEADER*/
 
 .btn {
@@ -271,7 +282,11 @@ section {
 }
 
 .home .content {
-    max-width: 60rem;
+    max-width : 60rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding   : 2rem;
+    margin-top: 8.5rem;
+
 }
 
 .home .content h2 {

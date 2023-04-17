@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paradise Café</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--Font-awesome-->
     <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
     <!--Hoja de estilos-->
@@ -17,8 +19,8 @@
     <div class="progress-bar">
         <div class="progress" id="progress"></div>
     </div>
-     <!-- Botón fixed subir Js -->
-     <div id="top-progress">
+    <!-- Botón fixed subir Js -->
+    <div id="top-progress">
         <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
     </div>
     <!--Header y nav-->
@@ -29,7 +31,6 @@
         <nav class="navbar">
             <a href="#home">Inicio</a>
             <a href="#about">Nosotros</a>
-            <a href="#menu">Menú</a>
             <a href="#products">Productos</a>
             <a href="#review">Reseñas</a>
             <a href="#contact">Contacto</a>
@@ -72,8 +73,8 @@
             <div class="content">
                 <h2>Café Paradise</h2>
                 <p>Y si inicias tu día con el más rico café</p>
-                <a  href="https://api.whatsapp.com/send?phone=542215656665&text=Hola%21%20"
-                target="_blank" class="btn">Pedir ahora!!</a>
+                <a href="https://api.whatsapp.com/send?phone=542215656665&text=Hola%21%20" target="_blank"
+                    class="btn">Pedir ahora!!</a>
             </div>
 
             <div class="skew-under"></div>
@@ -103,14 +104,63 @@
             </div>
         </section>
         <!--Fin Sección Nosotros-->
+        <!--Slider Swipper Js-->
+        <div id="container">
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/slider/1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="./img/slider/3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/5.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/6.png" alt="">
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="./img/slider/7.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/8.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/slider/9.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--Fin Slider Swipper Js-->
 
-
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni beatae accusantium quibusdam, voluptate delectus officia ipsam debitis aut a numquam aliquid, sapiente aspernatur nulla. Ratione natus harum aliquid quibusdam laudantium.</p>
+        </section>
 
     </main>
 
     <script src="./js/main.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/scrollTop.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 
 </html>

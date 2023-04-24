@@ -3,7 +3,7 @@
     {
         "id": "cafe-1",
         "titulo": "Capuchino",
-        "imagen": "../img/products/capuccino.jpg",
+        "imagen": "./img/products/capuccino.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -15,7 +15,7 @@
     {
         "id": "cafe-2",
         "titulo": "Australiano",
-        "imagen": "../img/products/australiano.jpg",
+        "imagen": "./img/products/australiano.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -27,7 +27,7 @@
     {
         "id": "cafe-3",
         "titulo": "Vienés",
-        "imagen": "../img/products/viena.jpg",
+        "imagen": "./img/products/viena.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -39,7 +39,7 @@
     {
         "id": "cafe-4",
         "titulo": "Helado",
-        "imagen": "../img/products/helado.jpg",
+        "imagen": "./img/products/helado.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -51,7 +51,7 @@
     {
         "id": "cafe-5",
         "titulo": "Inglés",
-        "imagen": "../img/products/ingles.jpg",
+        "imagen": "./img/products/ingles.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -63,7 +63,7 @@
     {
         "id": "cafe-6",
         "titulo": "Irish",
-        "imagen": "../img/products/irish.jpg",
+        "imagen": "./img/products/irish.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
@@ -75,7 +75,7 @@
     {
         "id": "cafe-7",
         "titulo": "Liqueurs",
-        "imagen":"../img/products/liqueurs.jpg",
+        "imagen":"./img/products/liqueurs.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"

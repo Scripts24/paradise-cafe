@@ -107,6 +107,16 @@ section {
 
 /*EFECTO SKEW */
 
+/*.skew-up {
+    position    : absolute;
+    top         : 0;
+    left        : 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color: var(--bg) transparent transparent transparent;
+    z-index     : 100;
+}*/
+
 .skew-under {
     position    : absolute;
     bottom      : 0;
@@ -215,7 +225,7 @@ section {
     color: var(--main-color);
 }
 
-.header .cart-items-container {
+.header .modal-container {
     position  : absolute;
     top       : 100%;
     right     : -100%;
@@ -223,13 +233,27 @@ section {
     width     : 35rem;
     height    : calc(100vh - 9.5rem);
     padding   : 0 1.5rem;
+    overflow  : auto;
 }
 
-.header .cart-items-container.active {
+.header .modal-container.active {
     right: 0;
 }
 
-.header .cart-items-container .cart-item {
+.header .modal-container::-webkit-scrollbar {
+    width: .8rem;
+}
+
+.header .modal-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.header .modal-container::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius   : 5rem;
+}
+
+.header .modal-container .modal-content {
     position   : relative;
     margin     : 2rem 0;
     display    : flex;
@@ -237,7 +261,20 @@ section {
     gap        : 1.5rem;
 }
 
-.header .cart-items-container .cart-item .fa-times {
+.header .modal-container .modal-header h2 {
+    margin-top   : 1rem;
+    font-size    : 3rem;
+    border-bottom: .3rem solid var(--main-color);
+    text-align: center;
+}
+
+.header .modal-container .total-content {
+    font-size: 2.5rem;
+    border-top: .3rem solid var(--main-color);
+    text-align: center;
+}
+
+.header .modal-container .fa-times {
     position : absolute;
     top      : 1rem;
     right    : 1rem;
@@ -246,26 +283,26 @@ section {
     color    : var(--black);
 }
 
-.header .cart-items-container .cart-item .fa-times:hover {
+.header .modal-container .fa-times:hover {
     color: var(--main-color);
 }
 
-.header .cart-items-container .cart-item img {
+.header .modal-container .modal-content img {
     height: 7rem;
 }
 
-.header .cart-items-container .cart-item .content h3 {
+.header .modal-container .modal-content h3 {
     font-size     : 2rem;
     color         : var(--black);
     padding-bottom: .5rem;
 }
 
-.header .cart-items-container .cart-item .content .price {
+.header .modal-container .modal-content .price {
     font-size: 1.5rem;
     color    : var(--main-color);
 }
 
-.header .cart-items-container .btn {
+.header .modal-container .btn {
     width     : 100%;
     text-align: center;
 }
@@ -407,56 +444,55 @@ section {
 /*PRODUCTOS*/
 
 .products .box-container {
-    display              : grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap                  : 1.5rem;
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    flex-wrap      : wrap;
+    gap            : 1rem;
 }
 
 .products .box-container .box {
     text-align: center;
     border    : var(--border);
-    padding   : 2rem;
+    width     : 20rem;
 }
 
-.products .box-container .box .icons a {
-    height     : 5rem;
-    width      : 5rem;
-    line-height: 5rem;
-    font-size  : 2rem;
-    border     : var(--border);
-    color      : #fff;
-    margin     : .3rem;
+.products .box-container .box .add {
+    border       : var(--border);
+    background   : var(--bg);
+    height       : 4.5rem;
+    width        : 6rem;
+    margin       : .3rem;
+    color        : #fff;
+    font-size    : 2rem;
+    margin-bottom: .5rem;
+    cursor       : pointer;
 }
 
-.products .box-container .box .icons a:hover {
+.products .box-container .box .add:hover {
     background: var(--main-color);
 }
 
 .products .box-container .box .image {
-    padding: 2.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
 .products .box-container .box .image img {
-    height: 25rem;
+    width        : 19rem;
+    height       : 19rem;
+    border-bottom: var(--border);
 }
 
 .products .box-container .box .content h3 {
     color    : #fff;
     font-size: 2.5rem;
-}
-
-.products .box-container .box .content .stars {
-    padding: 1.5rem;
-}
-
-.products .box-container .box .content .stars i {
-    font-size: 1.7rem;
-    color    : var(--main-color);
+    margin   : 0.5rem 0;
 }
 
 .products .box-container .box .content .price {
-    color    : #fff;
-    font-size: 2.5rem;
+    color        : #fff;
+    font-size    : 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .products .box-container .box .content .price span {
@@ -466,6 +502,12 @@ section {
 }
 
 /* CONTACTO*/
+
+.contact {
+    background         : url(../img/banner.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
+}
 
 .contact .row {
     display    : flex;

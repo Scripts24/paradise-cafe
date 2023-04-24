@@ -1,0 +1,79 @@
+[
+    
+    {
+        "id": "cafe-1",
+        "titulo": "Capuchino",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 350
+    },
+
+    {
+        "id": "cafe-2",
+        "titulo": "Café australiano",
+        "imagen": "../img/australiano.jpg",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 400
+    },
+
+    {
+        "id": "cafe-3",
+        "titulo": "Café viena",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 420
+    },
+
+    {
+        "id": "cafe-4",
+        "titulo": "Café helado",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 450
+    },
+
+    {
+        "id": "cafe-5",
+        "titulo": "Café inglés",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 480
+    },
+
+    {
+        "id": "cafe-6",
+        "titulo": "Café irish",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 460
+    },
+
+    {
+        "id": "cafe-7",
+        "titulo": "Café liqueurs",
+        "imagen": "../img/m1png",
+        "categoria": {
+            "nombre": "Café",
+            "id": "cafe"
+        },
+        "precio": 550
+    }
+]

@@ -255,16 +255,15 @@ section {
 
 .header .modal-container .modal-content {
     position       : relative;
-    margin         : 2rem 0;
     display        : flex;
     justify-content: space-around;
     align-items    : center;
-    gap            : 1.5rem;
+    gap            : 1rem;
 }
 
 .header .modal-container .modal-content .delete-product {
     color    : crimson;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor   : pointer;
 }
 
@@ -295,23 +294,51 @@ section {
 }
 
 .header .modal-container .modal-content img {
-    height: 7rem;
+    height: 5rem;
 }
 
 .header .modal-container .modal-content h3 {
     font-size     : 1.3rem;
-    color         : var(--black);
     padding-bottom: .5rem;
 }
 
+.header .modal-container .modal-content .subtotal {
+    font-size  : 1.1rem;
+    font-weight: 700;
+}
+
 .header .modal-container .modal-content .price {
-    font-size: 1.5rem;
-    color    : var(--main-color);
+    font-size  : 1rem;
+    font-weight: 700;
+    color      : crimson;
 }
 
 .header .modal-container .modal-content .quantity {
     font-size: 1.3rem;
     color    : var(--black);
+}
+
+.header .modal-container .modal-content .increase {
+    font-size  : 2.5rem;
+    font-weight: 700;
+    cursor     : pointer;
+    color      : crimson;
+}
+
+.header .modal-container .modal-content .box-quantity {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    gap            : .7rem;
+    border         : .2rem solid var(--main-color);
+    padding        : 0 .5rem;
+}
+
+.header .modal-container .modal-content .decrease {
+    font-size  : 2.5rem;
+    font-weight: 700;
+    cursor     : pointer;
+    color      : crimson;
 }
 
 .header .modal-container .btn {
@@ -325,8 +352,8 @@ section {
     font-size       : 2rem;
     border-radius   : 50%;
     padding         : .5rem;
-    top             : 2.8rem;
-    right           : 7.5rem;
+    top             : 21%;
+    right           : 6.8%;
     position        : absolute;
     display         : none;
 }

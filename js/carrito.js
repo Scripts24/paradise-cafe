@@ -5,65 +5,63 @@ const cantidad_carrito = document.getElementById("cantidad-carrito")
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-productos.forEach((product) => {
-    let content = document.createElement("div");
-    content.className = "box";
-    content.innerHTML += `
-                    <div class="image">
-                        <img src="${product.imagen}" >
-                    </div>
-                    <div class="content">
-                        <h3>${product.titulo}</h3>
-                        <div class="price">$ ${product.precio} <span>$250</span> </div>
-                    </div>
-    `;
+const get_products = async () => {
+    const response = await fetch("products.json")
+    const data = await response.json()
 
-    shop_content.append(content);
+    data.forEach((product) => {
+        let content = document.createElement("div");
+        content.className = "box";
+        content.innerHTML += `
+                        <div class="image">
+                            <img src="${product.imagen}" >
+                        </div>
+                        <div class="content">
+                            <h3>${product.titulo}</h3>
+                            <div class="price">$ ${product.precio} <span>$250</span> </div>
+                        </div>
+        `;
 
-    let comprar = document.createElement("button");
-    comprar.className = "add";
-    comprar.innerHTML = `
-    <i class="fas fa-cart-shopping"></i>
-    `;
+        shop_content.append(content);
 
-    content.append(comprar);
+        let comprar = document.createElement("button");
+        comprar.className = "add";
+        comprar.innerHTML = `
+        <i class="fas fa-cart-shopping"></i>
+        `;
 
-    comprar.addEventListener("click", () => {
+        content.append(comprar);
 
-        const repeat = carrito.some((repeat_product) => repeat_product.id === product.id)
+        comprar.addEventListener("click", () => {
 
-        if (repeat) {
-            carrito.map((prod) => {
-                if (prod.id === product.id) {
-                    prod.cantidad++
-                }
-            })
-        } else {
-            carrito.push({
-                id: product.id,
-                imagen: product.imagen,
-                titulo: product.titulo,
-                precio: product.precio,
-                cantidad: product.cantidad,
-            });
-        }
-        console.log(carrito);
+            const repeat = carrito.some((repeat_product) => repeat_product.id === product.id)
 
-        carrito_counter()
-        save_local()
+            if (repeat) {
+                carrito.map((prod) => {
+                    if (prod.id === product.id) {
+                        prod.cantidad++
+                    }
+                })
+            } else {
+                carrito.push({
+                    id: product.id,
+                    imagen: product.imagen,
+                    titulo: product.titulo,
+                    precio: product.precio,
+                    cantidad: product.cantidad,
+                });
+            }
+            carrito_counter()
+            save_local()
+        });
     });
-});
+}
 
-
-//Set item
+get_products()
 
 const save_local = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
-
-
-
-
 
 const pintar_carrito = () => {
 
@@ -95,21 +93,42 @@ const pintar_carrito = () => {
         carrito_content.innerHTML = `
             <img src="${product.imagen}">
             <h3>${product.titulo}</h3>
-            <p class="price">$ ${product.precio}</p>
-            <p class="quantity">Cantidad: ${product.cantidad}</p>
-            <p class="total">Total: $ ${product.cantidad * product.precio}</p>
+            <p class="price"> $${product.precio}</p>
+            <div class="box-quantity">
+            <div class="increase">+</div>
+            <p class="quantity"> ${product.cantidad}</p>
+            <div class="decrease">-</div>
+            </div>
+            <p class="subtotal">Subtotal: $${product.cantidad * product.precio}</p>
+
+            <div class="delete-product"><i class="fa-solid fa-trash-can"></i></div>
 
         `
         modal_container.append(carrito_content)
 
-        let eliminar = document.createElement("div")
-        eliminar.className = "delete-product"
-        eliminar.innerHTML = `
-        <i class="fa-solid fa-trash-can"></i>
-        `
-        carrito_content.append(eliminar)
+        let restar = carrito_content.querySelector(".decrease")
 
-        eliminar.addEventListener("click", eliminar_producto)
+        restar.addEventListener("click", () => {
+            if (product.cantidad !== 1) {
+                product.cantidad--
+            }
+            save_local()
+            pintar_carrito()
+        })
+
+        let sumar = carrito_content.querySelector(".increase")
+
+        sumar.addEventListener("click", () => {
+            product.cantidad++
+            save_local()
+            pintar_carrito()
+        })
+
+        let eliminar = carrito_content.querySelector(".delete-product")
+
+        eliminar.addEventListener("click", () => {
+            eliminar_producto(product.id)
+        })
     })
 
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0)
@@ -123,8 +142,8 @@ const pintar_carrito = () => {
 
 ver_carrito.addEventListener("click", pintar_carrito)
 
-const eliminar_producto = () => {
-    const found_id = carrito.find((element) => element.id)
+const eliminar_producto = (id) => {
+    const found_id = carrito.find((element) => element.id === id)
 
     carrito = carrito.filter((carrito_id) => {
         return carrito_id !== found_id

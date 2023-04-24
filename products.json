@@ -3,77 +3,84 @@
     {
         "id": "cafe-1",
         "titulo": "Capuchino",
-        "imagen": "../img/m1png",
+        "imagen": "../img/products/capuccino.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 350
+        "precio": 350,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-2",
-        "titulo": "Café australiano",
-        "imagen": "../img/australiano.jpg",
+        "titulo": "Australiano",
+        "imagen": "../img/products/australiano.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 400
+        "precio": 400,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-3",
-        "titulo": "Café viena",
-        "imagen": "../img/m1png",
+        "titulo": "Vienés",
+        "imagen": "../img/products/viena.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 420
+        "precio": 420,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-4",
-        "titulo": "Café helado",
-        "imagen": "../img/m1png",
+        "titulo": "Helado",
+        "imagen": "../img/products/helado.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 450
+        "precio": 450,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-5",
-        "titulo": "Café inglés",
-        "imagen": "../img/m1png",
+        "titulo": "Inglés",
+        "imagen": "../img/products/ingles.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 480
+        "precio": 480,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-6",
-        "titulo": "Café irish",
-        "imagen": "../img/m1png",
+        "titulo": "Irish",
+        "imagen": "../img/products/irish.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 460
+        "precio": 460,
+        "cantidad": 1
     },
 
     {
         "id": "cafe-7",
-        "titulo": "Café liqueurs",
-        "imagen": "../img/m1png",
+        "titulo": "Liqueurs",
+        "imagen":"../img/products/liqueurs.jpg",
         "categoria": {
             "nombre": "Café",
             "id": "cafe"
         },
-        "precio": 550
+        "precio": 550,
+        "cantidad": 1
     }
 ]

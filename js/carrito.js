@@ -3,7 +3,7 @@ const ver_carrito = document.getElementById("cart-btn");
 const modal_container = document.getElementById("modal-container")
 const cantidad_carrito = document.getElementById("cantidad-carrito")
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -50,8 +50,19 @@ productos.forEach((product) => {
         console.log(carrito);
 
         carrito_counter()
+        save_local()
     });
 });
+
+
+//Set item
+
+const save_local = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+
+
 
 
 const pintar_carrito = () => {
@@ -119,10 +130,18 @@ const eliminar_producto = () => {
         return carrito_id !== found_id
     })
     carrito_counter()
+    save_local()
     pintar_carrito()
 }
 
 const carrito_counter = () => {
     cantidad_carrito.style.display = "block"
-    cantidad_carrito.innerText = carrito.length
+
+    const carrito_length = carrito.length
+
+    localStorage.setItem("carrito_length", JSON.stringify(carrito_length))
+
+    cantidad_carrito.innerText = JSON.parse(localStorage.getItem("carrito_length"))
 }
+
+carrito_counter()

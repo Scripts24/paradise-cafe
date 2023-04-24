@@ -1,6 +1,7 @@
 const shop_content = document.getElementById("shop-content");
 const ver_carrito = document.getElementById("cart-btn");
 const modal_container = document.getElementById("modal-container")
+const cantidad_carrito = document.getElementById("cantidad-carrito")
 
 let carrito = [];
 
@@ -28,17 +29,32 @@ productos.forEach((product) => {
     content.append(comprar);
 
     comprar.addEventListener("click", () => {
-        carrito.push({
-            id: product.id,
-            imagen: product.imagen,
-            titulo: product.titulo,
-            precio: product.precio,
-        });
+
+        const repeat = carrito.some((repeat_product) => repeat_product.id === product.id)
+
+        if (repeat) {
+            carrito.map((prod) => {
+                if (prod.id === product.id) {
+                    prod.cantidad++
+                }
+            })
+        } else {
+            carrito.push({
+                id: product.id,
+                imagen: product.imagen,
+                titulo: product.titulo,
+                precio: product.precio,
+                cantidad: product.cantidad,
+            });
+        }
         console.log(carrito);
+
+        carrito_counter()
     });
 });
 
-ver_carrito.addEventListener("click", () => {
+
+const pintar_carrito = () => {
 
     modal_container.innerHTML = ""
     modal_container.style.display = "block"
@@ -69,15 +85,44 @@ ver_carrito.addEventListener("click", () => {
             <img src="${product.imagen}">
             <h3>${product.titulo}</h3>
             <p class="price">$ ${product.precio}</p>
+            <p class="quantity">Cantidad: ${product.cantidad}</p>
+            <p class="total">Total: $ ${product.cantidad * product.precio}</p>
+
         `
         modal_container.append(carrito_content)
+
+        let eliminar = document.createElement("div")
+        eliminar.className = "delete-product"
+        eliminar.innerHTML = `
+        <i class="fa-solid fa-trash-can"></i>
+        `
+        carrito_content.append(eliminar)
+
+        eliminar.addEventListener("click", eliminar_producto)
     })
 
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0)
+    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0)
 
     const total_buying = document.createElement("div")
     total_buying.className = "total-content"
     total_buying.innerHTML = `Total: $ ${total} `
     modal_container.append(total_buying)
 
-});
+};
+
+ver_carrito.addEventListener("click", pintar_carrito)
+
+const eliminar_producto = () => {
+    const found_id = carrito.find((element) => element.id)
+
+    carrito = carrito.filter((carrito_id) => {
+        return carrito_id !== found_id
+    })
+    carrito_counter()
+    pintar_carrito()
+}
+
+const carrito_counter = () => {
+    cantidad_carrito.style.display = "block"
+    cantidad_carrito.innerText = carrito.length
+}

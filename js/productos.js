@@ -7,7 +7,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 350
+        precio: 350,
+        cantidad: 1
     },
 
     {
@@ -18,7 +19,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 400
+        precio: 400,
+        cantidad: 1
     },
 
     {
@@ -29,7 +31,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 420
+        precio: 420,
+        cantidad: 1
     },
 
     {
@@ -40,7 +43,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 450
+        precio: 450,
+        cantidad: 1
     },
 
     {
@@ -51,7 +55,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 480
+        precio: 480,
+        cantidad: 1
     },
 
     {
@@ -62,7 +67,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 460
+        precio: 460,
+        cantidad: 1
     },
 
     {
@@ -73,8 +79,8 @@ const  productos = [
             nombre: "Café",
             id: "cafe"
         },
-        precio: 550
+        precio: 550,
+        cantidad: 1
     },
-
 
 ]

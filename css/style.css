@@ -231,7 +231,7 @@ section {
     right     : -100%;
     background: #fff;
     width     : 35rem;
-    height    : calc(100vh - 9.5rem);
+    height    : calc(100vh - 12.5rem);
     padding   : 0 1.5rem;
     overflow  : auto;
 }
@@ -254,22 +254,29 @@ section {
 }
 
 .header .modal-container .modal-content {
-    position   : relative;
-    margin     : 2rem 0;
-    display    : flex;
-    align-items: center;
-    gap        : 1.5rem;
+    position       : relative;
+    margin         : 2rem 0;
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    gap            : 1.5rem;
+}
+
+.header .modal-container .modal-content .delete-product {
+    color    : crimson;
+    font-size: 2rem;
+    cursor   : pointer;
 }
 
 .header .modal-container .modal-header h2 {
     margin-top   : 1rem;
     font-size    : 3rem;
     border-bottom: .3rem solid var(--main-color);
-    text-align: center;
+    text-align   : center;
 }
 
 .header .modal-container .total-content {
-    font-size: 2.5rem;
+    font-size : 2.5rem;
     border-top: .3rem solid var(--main-color);
     text-align: center;
 }
@@ -292,7 +299,7 @@ section {
 }
 
 .header .modal-container .modal-content h3 {
-    font-size     : 2rem;
+    font-size     : 1.3rem;
     color         : var(--black);
     padding-bottom: .5rem;
 }
@@ -302,9 +309,26 @@ section {
     color    : var(--main-color);
 }
 
+.header .modal-container .modal-content .quantity {
+    font-size: 1.3rem;
+    color    : var(--black);
+}
+
 .header .modal-container .btn {
     width     : 100%;
     text-align: center;
+}
+
+.header .quantity-cart {
+    background-color: var(--main-color);
+    color           : #fff;
+    font-size       : 2rem;
+    border-radius   : 50%;
+    padding         : .5rem;
+    top             : 2.8rem;
+    right           : 7.5rem;
+    position        : absolute;
+    display         : none;
 }
 
 /*INICIO*/

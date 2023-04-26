@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!--Font-awesome-->
+    <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- Progreso scroll -->
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <!--Header -->
+    <header class="header">
+        <a href="./index.html" class="logo">
+            <img src="./img/logo.png" alt="logo" />
+        </a>
+        <h1 class="title-checkout">Compra</h1>
+    </header>
+    <!--Fin Header-->
+    <main>
+        <section class="checkout">
+            <form class="form">
+                <div class="input-box">
+                    <span class="fas fa-user"></span>
+                    <input type="text" id="nombre" value="" placeholder="Nombre y apellido" required>
+                </div>
+                <div class="input-box">
+                    <span class="fa-solid fa-house"></span>
+                    <input type="text" placeholder="Dirección" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Teléfono" required>
+                </div>
+                <div class="input-box">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <input type="submit" id="finalizar-compra" value="Finalizar" class="btn">
+                <input type="reset" value="Reset" class="btn">
+            </form>
+            <div class="contact-form-response none">
+
+        </section>
+    </main>
+    <!--Fin Contenido principal-->
+    <!--Inicio Footer-->
+    <footer class="footer">
+        <div class="social">
+            <a href="https://es-la.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://api.whatsapp.com/send?phone=542215656665&text=Hola%21%20" target="_blank"
+                class="fa fa-whatsapp"></a>
+            <a href="mailto:cafe_paradise@gmail.com" target="_blank" class="fas fa-envelope"> </a>
+        </div>
+        <div class="developed">
+            <p>
+                Todos los derechos reservados &copy;
+                <script> document.write(new Date().getFullYear());</script> - Café Paradise
+            </p>
+            <img src="./img/developed.png" alt="">
+        </div>
+    </footer>
+    <!--Fin footer -->
+    <!--Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+
+</html>

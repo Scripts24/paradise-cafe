@@ -274,12 +274,6 @@ section {
     text-align   : center;
 }
 
-.header .modal-container .total-content {
-    font-size : 2.5rem;
-    border-top: .3rem solid var(--main-color);
-    text-align: center;
-}
-
 .header .modal-container .fa-times {
     position : absolute;
     top      : 1rem;
@@ -343,6 +337,18 @@ section {
 
 .header .modal-container .btn {
     width     : 100%;
+    text-align: center;
+}
+
+.modal-container .parrafo-modal {
+    font-size    : 2.5rem;
+    margin-bottom: 1.25rem;
+    text-align   : center;
+}
+
+.modal-container .total-content {
+    font-size : 2.5rem;
+    border-top: .3rem solid var(--main-color);
     text-align: center;
 }
 
@@ -603,6 +609,60 @@ section {
     text-transform: none;
     background    : none;
 }
+
+/*CHECKOUT*/
+
+.checkout {
+    min-height         : 100vh;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    background         : url(../img/banner.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
+}
+
+.title-checkout {
+    color         : #fff;
+    text-transform: uppercase;
+    margin-right  : 40%;
+    font-size: 3rem;
+}
+
+.checkout form {
+    margin-top: 10rem;
+    flex      : 1 1 45rem;
+    padding   : 5rem 2rem;
+    text-align: center;
+}
+
+.checkout form .input-box {
+    display      : flex;
+    align-items  : center;
+    margin-top   : 2rem;
+    margin-bottom: 2rem;
+    background   : var(--bg);
+    border       : var(--border);
+}
+
+.checkout form .input-box span {
+    color       : #fff;
+    font-size   : 2rem;
+    padding-left: 2rem;
+}
+
+.checkout form .input-box input {
+    width         : 100%;
+    padding       : 1rem;
+    font-size     : 1.7rem;
+    color         : #fff;
+    text-transform: none;
+    background    : none;
+}
+
+
+
+
 
 /* FOOTER*/
 

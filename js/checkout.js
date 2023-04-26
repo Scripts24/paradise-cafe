@@ -33,14 +33,16 @@ document.addEventListener("submit", (e) => {
         position: 'center',
         color: "#13131a",
         icon: 'success',
-        background: "var(--main-color)",
+        background: "#fff",
         showConfirmButton: true,
         confirmButtonColor: "#13131a",
     }).then((result) => {
         if (result.isConfirmed) {
+            localStorage.clear()
             window.location.href = "../index.html";
         }
     });
     setTimeout(() => (window.location.href = "../index.html"), 10000);
+    localStorage.clear()
 });
 

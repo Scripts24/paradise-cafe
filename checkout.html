@@ -32,20 +32,21 @@
             <form class="form">
                 <div class="input-box">
                     <span class="fas fa-user"></span>
-                    <input type="text" id="nombre" value="" placeholder="Nombre y apellido" required>
+                    <input type="text" id="nombre" value="" placeholder="Nombre y apellido"
+                        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                 </div>
                 <div class="input-box">
                     <span class="fa-solid fa-house"></span>
-                    <input type="text" placeholder="Dirección" required>
+                    <input type="text" placeholder="Dirección" pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" required>
                 </div>
-
                 <div class="input-box">
                     <span class="fas fa-phone"></span>
-                    <input type="number" placeholder="Teléfono" required>
+                    <input type="number" placeholder="Teléfono" pattern="^\d{7,14}$" required>
                 </div>
                 <div class="input-box">
                     <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" placeholder="Email"
+                        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
                 </div>
                 <input type="submit" id="finalizar-compra" value="Finalizar" class="btn">
                 <input type="reset" value="Reset" class="btn">

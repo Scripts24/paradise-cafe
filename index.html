@@ -8,8 +8,6 @@
     <title>Paradise Café</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <!-- Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--Font-awesome-->
@@ -46,7 +44,10 @@
         </div>
         <div class="search-form">
             <input type="search" id="search-box" placeholder="Buscar..." />
-            <label for="search-box" class="fas fa-search"></label>
+            <!--<label for="search-box" class="fas fa-search"></label>-->
+            <ul id="resultado" class="search-result">
+
+            </ul>
         </div>
         <div class="modal-container" id="modal-container">
             <!--Se rellena con Js-->
@@ -211,8 +212,6 @@
     <!--Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
-    <!--Toastify -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!--Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

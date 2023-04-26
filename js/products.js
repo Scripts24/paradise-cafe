@@ -41,7 +41,7 @@ const get_products = async () => {
                 showConfirmButton: false,
                 timer: 3000,
                 color: "#13131a",
-                background: "var(--main-color)"
+                background: "#fff"
             })
 
             if (repeat) {
@@ -63,6 +63,7 @@ const get_products = async () => {
             save_local()
         });
     });
+
 }
 
 get_products()
@@ -70,3 +71,4 @@ get_products()
 const save_local = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+

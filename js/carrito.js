@@ -69,7 +69,7 @@ const pintar_carrito = () => {
                 showConfirmButton: false,
                 timer: 3000,
                 color: "#13131a",
-                background: "var(--main-color)"
+                background: "#fff"
             })
         })
     })
@@ -110,7 +110,7 @@ const pintar_carrito = () => {
                     text: "Agrega algún producto para continuar con la compra",
                     confirmButtonText: "Aceptar",
                     confirmButtonColor:"#13131a",
-                    background: "var(--main-color)",
+                    background: "#fff",
                     color: "#13131a",
                 });
             } else {
@@ -123,7 +123,9 @@ const pintar_carrito = () => {
     if (vaciar_carrito) {
         vaciar_carrito.addEventListener('click', () => {
             carrito.length = [];
+            localStorage.clear()
             pintar_carrito()
+            window.location.reload()
         });
     }
 };

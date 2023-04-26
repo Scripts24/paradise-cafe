@@ -188,6 +188,17 @@ section {
     display: none;
 }
 
+
+.header .quantity-cart {
+    position   : absolute;
+    color      : #fff;
+    font-size  : 1.5rem;
+    bottom     : 60%;
+    margin-left: 1.5rem;
+
+}
+
+
 .header .search-form {
     position        : absolute;
     top             : 115%;
@@ -352,17 +363,6 @@ section {
     text-align: center;
 }
 
-.header .quantity-cart {
-    background-color: var(--main-color);
-    color           : #fff;
-    font-size       : 2rem;
-    border-radius   : 50%;
-    padding         : .5rem;
-    top             : 21%;
-    right           : 6.8%;
-    position        : absolute;
-    display         : none;
-}
 
 /*INICIO*/
 
@@ -660,10 +660,6 @@ section {
     background    : none;
 }
 
-
-
-
-
 /* FOOTER*/
 
 .footer {
@@ -788,6 +784,7 @@ section {
         height: 15rem;
     }
 }
+
 
 @media (max-width: 500px) {
 

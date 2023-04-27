@@ -552,12 +552,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-.products .box-container .box .content .price span {
-    text-decoration: line-through;
-    font-weight    : lighter;
-    font-size      : 1.5rem;
-}
-
 /* CONTACTO*/
 
 .contact {
@@ -686,7 +680,7 @@ section {
     display        : flex;
     justify-content: center;
     flex-wrap      : wrap;
-    padding        : 2rem 0;
+    margin-bottom  : 1rem;
     gap            : 1rem;
 }
 
@@ -698,6 +692,10 @@ section {
 
 .footer .links a:hover {
     background: var(--main-color);
+}
+
+.footer .payment {
+    margin-bottom: 1rem;
 }
 
 .footer .developed p {

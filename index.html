@@ -8,6 +8,8 @@
     <title>Paradise Café</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!--Animate on scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--Font-awesome-->
@@ -38,7 +40,9 @@
         </nav>
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-cart-shopping" id="cart-btn"> <p id="cantidad-carrito" class="quantity-cart">0</p></div>
+            <div class="fas fa-cart-shopping" id="cart-btn">
+                <p id="cantidad-carrito" class="quantity-cart">0</p>
+            </div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
         <div class="search-form">
@@ -139,8 +143,21 @@
         <!--Inicio Sección Productos-->
         <section class="products">
             <h1 class="heading"> Nuestros <span>productos</span> </h1>
-
-            <div class="box-container" id="shop-content">
+            <ul>
+                <li>
+                    <button class="boton-categoria active btn" id="todos">Todos los productos</button>
+                </li>
+                <li>
+                    <button class="boton-categoria btn" id="preparado">Preparados</button>
+                </li>
+                <li>
+                    <button class="boton-categoria btn" id="envasado">Envasados</button>
+                </li>
+            </ul>
+            <h2 class="titulo-principal btn" id="titulo-principal">
+                Todos los productos
+            </h2>
+            <div class="box-container" data-aos="zoom-in-up" id="shop-content">
                 <!--Se rellena con Js-->
             </div>
 
@@ -188,6 +205,9 @@
                 class="fa fa-whatsapp"></a>
             <a href="mailto:cafe_paradise@gmail.com" target="_blank" class="fas fa-envelope"> </a>
         </div>
+        <div class="payment">
+            <img src="./img/payment.png" alt="">
+        </div>
         <div class="links">
             <a href="#">Inicio</a>
             <a href="#">Nosotros</a>
@@ -212,6 +232,13 @@
     <script src="./js/slider.js"></script>
     <!--Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Animate on scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+    </script>
 </body>
 
 </html>

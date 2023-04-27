@@ -3,6 +3,10 @@ const ver_carrito = document.getElementById("cart-btn");
 const modal_container = document.getElementById("modal-container")
 const cantidad_carrito = document.getElementById("cantidad-carrito")
 
+
+const botones_categorias = document.querySelectorAll('.boton-categoria');
+const titulo_principal = document.querySelector('#titulo-principal');
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const get_products = async () => {
@@ -18,7 +22,7 @@ const get_products = async () => {
                         </div>
                         <div class="content">
                             <h3>${product.titulo}</h3>
-                            <div class="price">$ ${product.precio} <span>$250</span> </div>
+                            <div class="price">$ ${product.precio}</div>
                         </div>
         `;
 
@@ -66,11 +70,9 @@ const get_products = async () => {
 }
 
 get_products()
-
 const save_local = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
-
 
 
 const pintar_carrito = () => {

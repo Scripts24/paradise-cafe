@@ -2,11 +2,11 @@
     
     {
         "id": "cafe-1",
-        "titulo": "Capuchino",
+        "titulo": "Capuccino",
         "imagen": "./img/products/capuccino.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 350,
         "cantidad": 1
@@ -17,8 +17,8 @@
         "titulo": "Australiano",
         "imagen": "./img/products/australiano.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 400,
         "cantidad": 1
@@ -29,8 +29,8 @@
         "titulo": "Vienés",
         "imagen": "./img/products/viena.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 420,
         "cantidad": 1
@@ -41,8 +41,8 @@
         "titulo": "Helado",
         "imagen": "./img/products/helado.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 450,
         "cantidad": 1
@@ -53,8 +53,8 @@
         "titulo": "Inglés",
         "imagen": "./img/products/ingles.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 480,
         "cantidad": 1
@@ -65,8 +65,8 @@
         "titulo": "Irish",
         "imagen": "./img/products/irish.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 460,
         "cantidad": 1
@@ -77,10 +77,106 @@
         "titulo": "Liqueurs",
         "imagen":"./img/products/liqueurs.jpg",
         "categoria": {
-            "nombre": "Café",
-            "id": "cafe"
+            "nombre": "Preparado",
+            "id": "preparado"
         },
         "precio": 550,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-8",
+        "titulo": "Bolivia p/ filtro",
+        "imagen":"./img/products/filtro-bolivia.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3700,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-9",
+        "titulo": "Colombia p/ cápsulas",
+        "imagen":"./img/products/capsulas-colombia.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3500,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-10",
+        "titulo": "Nicaragua p/ cápsulas",
+        "imagen":"./img/products/nicaragua.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3700,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-11",
+        "titulo": "Brasil molido",
+        "imagen":"./img/products/brasil-molido.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3100,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-12",
+        "titulo": "Colombia en granos",
+        "imagen":"./img/products/colombia-granos.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 4900,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-13",
+        "titulo": "Brasil intenso",
+        "imagen":"./img/products/brasil-intenso.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3900,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-14",
+        "titulo": "Bolivia en granos",
+        "imagen":"./img/products/bolivia-granos.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 3600,
+        "cantidad": 1
+    },
+
+    {
+        "id": "cafe-15",
+        "titulo": "Colombia premium",
+        "imagen":"./img/products/colombia-premium.jpg",
+        "categoria": {
+            "nombre": "Envasado",
+            "id": "envasado"
+        },
+        "precio": 9000,
         "cantidad": 1
     }
 ]

@@ -400,6 +400,48 @@ section {
     align-items: center;
 }
 
+/*Modalidad*/
+
+.modality h2{
+    color: #fff;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 4rem;
+    padding-top: 2rem;
+}
+
+.modality .box-container {
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    flex-wrap      : wrap;
+    gap            : 1rem;
+}
+
+.modality .box-container .box {
+    text-align: center;
+    border    : var(--border);
+    width     : 28rem;
+    margin-bottom: 3.5rem;
+}
+
+.modality .box-container .box .image {
+    margin-bottom: 1rem;
+}
+
+.modality .box-container .box .image img {
+    width        : 27rem;
+    height       : 19rem;
+    border-bottom: var(--border);
+}
+
+.modality .box-container .box .content h3 {
+    color    : #fff;
+    font-size: 2.5rem;
+    margin   :1rem 0;
+}
+
+
 /*NOSOTROS*/
 
 .about .row {

@@ -98,7 +98,7 @@
 
     {
         "id": "cafe-9",
-        "titulo": "Colombia p/ cápsulas",
+        "titulo": "Colombia cápsulas",
         "imagen":"./img/products/capsulas-colombia.jpg",
         "categoria": {
             "nombre": "Envasado",
@@ -110,7 +110,7 @@
 
     {
         "id": "cafe-10",
-        "titulo": "Nicaragua p/ cápsulas",
+        "titulo": "Nicaragua cápsulas",
         "imagen":"./img/products/nicaragua.jpg",
         "categoria": {
             "nombre": "Envasado",

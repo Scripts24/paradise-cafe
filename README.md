@@ -18,9 +18,14 @@
 * Canva
 
 ---
+### Proyecto finalizado
+
+![Vista Previa](./img/preview.gif)
+
+---
 
 ##### Realizado por Patricia Atanasoff
 
-[Email](https://pato.atanasoff@gmail.com)
-[Github](https://github.com/PatoCode24)
+`pato.atanasoff0815@gmail.com`
+
 

@@ -2,8 +2,8 @@ window.addEventListener('load', function () {
     let preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
 
-    let body = document.querySelector('body')
+    let bodyElement = document.body;
 
-    body.classList.remove("hidden");
+    bodyElement.classList.remove("hidden");
 
 });

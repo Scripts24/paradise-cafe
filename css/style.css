@@ -68,11 +68,11 @@ section {
 }
 
 #loader {
-    border       : 8px solid #f3f3f3;
-    border-top   : 8px solid var(--main-color);
+    border       : 10px solid #f3f3f3;
+    border-top   : 10px solid var(--main-color);
     border-radius: 50%;
-    width        : 60px;
-    height       : 60px;
+    width        : 80px;
+    height       : 80px;
     animation    : spin 2s linear infinite;
 }
 

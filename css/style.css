@@ -48,6 +48,45 @@ section {
     padding: 2rem 7%;
 }
 
+/*Preloader*/
+
+.hidden{
+    overflow: hidden;
+}
+
+#preloader {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: black;
+    z-index         : 9999;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+#loader {
+    border       : 8px solid #f3f3f3;
+    border-top   : 8px solid var(--main-color);
+    border-radius: 50%;
+    width        : 60px;
+    height       : 60px;
+    animation    : spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 /* PROGRESO SCROLL */
 
 .progress-bar {
@@ -195,7 +234,6 @@ section {
     font-size  : 1.5rem;
     bottom     : 60%;
     margin-left: 1.5rem;
-
 }
 
 
@@ -402,11 +440,11 @@ section {
 
 /*Modalidad*/
 
-.modality h2{
-    color: #fff;
-    text-align: center;
-    margin: 1.5rem 0;
-    font-size: 4rem;
+.modality h2 {
+    color      : #fff;
+    text-align : center;
+    margin     : 1.5rem 0;
+    font-size  : 4rem;
     padding-top: 2rem;
 }
 
@@ -419,9 +457,9 @@ section {
 }
 
 .modality .box-container .box {
-    text-align: center;
-    border    : var(--border);
-    width     : 28rem;
+    text-align   : center;
+    border       : var(--border);
+    width        : 28rem;
     margin-bottom: 3.5rem;
 }
 
@@ -438,7 +476,7 @@ section {
 .modality .box-container .box .content h3 {
     color    : #fff;
     font-size: 2.5rem;
-    margin   :1rem 0;
+    margin   : 1rem 0;
 }
 
 

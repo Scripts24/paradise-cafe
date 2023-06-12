@@ -4,8 +4,6 @@ const modal_container = document.getElementById("modal-container")
 const cantidad_carrito = document.getElementById("cantidad-carrito")
 
 
-const botones_categorias = document.querySelectorAll('.boton-categoria');
-const titulo_principal = document.querySelector('#titulo-principal');
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 

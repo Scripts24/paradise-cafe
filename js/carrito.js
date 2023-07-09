@@ -2,30 +2,84 @@ const shop_content = document.getElementById("shop-content");
 const ver_carrito = document.getElementById("cart-btn");
 const modal_container = document.getElementById("modal-container");
 const cantidad_carrito = document.getElementById("cantidad-carrito");
+const wishlistButtonHeader = document.getElementById("wishlist-header-button");
+const wishlistPopup = document.getElementById("wishlist-popup");
+const closePopupButton = document.getElementById("close-popup");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+let data;
+
+const getProductById = (productId) => {
+    return data.find((product) => product.id === productId);
+};
+
+const updateWishlistHeader = () => {
+    const wishlistHeaderButton = document.getElementById("wishlist-header-button");
+    const wishlistCounter = document.getElementById("wishlist-counter");
+
+    wishlistCounter.textContent = wishlist.length.toString();
+
+    if (wishlist.length > 0) {
+        wishlistHeaderButton.classList.add("has-items");
+    } else {
+        wishlistHeaderButton.classList.remove("has-items");
+    }
+};
+
+const addToWishlist = (product) => {
+    wishlist.push(product);
+    Swal.fire({
+        title: `¡Se ha agregado café ${product.titulo} a tu lista de deseos`,
+        showConfirmButton: false,
+        timer: 2000,
+        color: "#13131a",
+        background: "#fff",
+    });
+    saveWishlist();
+    updateWishlistHeader();
+};
+
+const removeFromWishlist = (product) => {
+    wishlist = wishlist.filter((wishlistProduct) => wishlistProduct.id !== product.id);
+    Swal.fire({
+        title: `¡Se ha eliminado el café ${product.titulo} de tu lista de deseos`,
+        showConfirmButton: false,
+        timer: 2000,
+        color: "#13131a",
+        background: "#fff",
+    });
+    saveWishlist();
+    updateWishlistHeader();
+};
 
 const get_products = async () => {
     const response = await fetch("products.json");
-    const data = await response.json();
+    data = await response.json();
 
     data.forEach((product, index) => {
         let content = document.createElement("div");
         content.className = "box";
-        
+        content.setAttribute("data-product-id", product.id);
         // Agregamos animaciones de la librería AOS
         content.setAttribute("data-aos", "zoom-in-up");
         content.setAttribute("data-aos-delay", `${index * 100}`);
 
         content.innerHTML += `
-                        <div class="image">
-                            <img src="${product.imagen}">
-                        </div>
-                        <div class="content">
-                            <h3>${product.titulo}</h3>
-                            <div class="price">$ ${product.precio}</div>
-                        </div>
-                    `;
+                            <div class="image">
+                                <img src="${product.imagen}">
+                            </div>
+                            <div class="content">
+                                <h3>${product.titulo}</h3>
+                                <div class="price">$ ${product.precio}</div>
+                            </div>
+                            <div class="wishlist">
+                                <button class="wishlist-btn" data-product-id="${product.id}">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            
+                        `;
 
         shop_content.append(content);
 
@@ -38,9 +92,7 @@ const get_products = async () => {
         content.append(comprar);
 
         comprar.addEventListener("click", () => {
-            const repeat = carrito.some(
-                (repeat_product) => repeat_product.id === product.id
-            );
+            const repeat = carrito.some((repeat_product) => repeat_product.id === product.id);
 
             Swal.fire({
                 title: `¡Se ha agregado ${product.cantidad} unidad de café ${product.titulo}`,
@@ -74,7 +126,35 @@ const get_products = async () => {
             carrito_counter();
             save_local();
         });
+
+        let wishlistButton = content.querySelector(".wishlist-btn");
+        wishlistButton.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const productElement = event.target.closest(".box");
+            const productId = productElement.dataset.productId;
+            const product = getProductById(productId);
+
+            if (product) {
+                if (isProductInWishlist(product)) {
+                    removeFromWishlist(product);
+                    wishlistButton.classList.remove("added");
+                } else {
+                    addToWishlist(product);
+                    wishlistButton.classList.add("added");
+                }
+            }
+        });
     });
+
+    wishlist.forEach((wishlistProduct) => {
+        const productId = wishlistProduct.id;
+        const wishlistButton = document.querySelector(`.wishlist-btn[data-product-id="${productId}"]`);
+        if (wishlistButton) {
+            wishlistButton.classList.add("added");
+        }
+    });
+
+    updateWishlistHeader()
 };
 
 get_products();
@@ -82,6 +162,66 @@ get_products();
 const save_local = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
+wishlistButtonHeader.addEventListener("click", () => {
+    renderWishlistPopup();
+});
+
+closePopupButton.addEventListener("click", () => {
+    wishlistPopup.style.display = "none";
+});
+
+const isProductInWishlist = (product) => {
+    return wishlist.some((wishlistProduct) => wishlistProduct.id === product.id);
+};
+
+/*const addToWishlist = (product) => {
+    wishlist.push(product);
+    saveWishlist();
+};
+
+const removeFromWishlist = (product) => {
+    wishlist = wishlist.filter((wishlistProduct) => wishlistProduct.id !== product.id);
+    saveWishlist();
+};*/
+
+const renderWishlistPopup = () => {
+    const wishlistItemsContainer = document.getElementById("wishlist-items");
+    wishlistItemsContainer.innerHTML = ""; // Limpiar contenido existente
+
+    if (wishlist.length === 0) {
+        wishlistItemsContainer.textContent = "Tu lista de deseos está vacía";
+    } else {
+        wishlist.forEach((wishlistProduct) => {
+            const product = getProductById(wishlistProduct.id);
+            if (product) {
+                const wishlistItem = document.createElement("div");
+                wishlistItem.textContent = product.titulo;
+                wishlistItemsContainer.appendChild(wishlistItem);
+            }
+        });
+    }
+
+    // Aplicar estilos a los botones de corazón según el estado de la lista de deseos
+    const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+    wishlistButtons.forEach((button) => {
+        const productId = button.dataset.productId;
+        const product = getProductById(productId);
+
+        if (product && isProductInWishlist(product)) {
+            button.classList.add("added");
+        } else {
+            button.classList.remove("added");
+        }
+    });
+
+    wishlistPopup.style.display = "flex";
+};
+
+const saveWishlist = () => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+};
+
 
 const pintar_carrito = () => {
     modal_container.innerHTML = "";

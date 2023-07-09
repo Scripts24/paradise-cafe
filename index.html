@@ -48,12 +48,25 @@
             <a href="#contact">Contacto</a>
         </nav>
         <div class="icons">
+            <button id="wishlist-header-button">
+                <i class="fas fa-heart"></i>
+                <sup id="wishlist-counter"></sup>
+            </button>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-cart-shopping" id="cart-btn">
                 <p id="cantidad-carrito" class="quantity-cart">0</p>
             </div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
+        <!--Pop up Whislist-->
+        <div id="wishlist-popup" class="popup">
+            <div class="popup-content">
+                <h2>Lista de Deseos</h2>
+                <div id="wishlist-items"> </div>
+                <button id="close-popup">Cerrar</button>
+            </div>
+        </div>
+
         <div class="search-form">
             <input type="search" id="search-box" placeholder="Buscar..." />
             <!--<label for="search-box" class="fas fa-search"></label>-->

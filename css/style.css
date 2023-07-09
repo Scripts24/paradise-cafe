@@ -227,7 +227,6 @@ section {
     display: none;
 }
 
-
 .header .quantity-cart {
     position   : absolute;
     color      : #fff;
@@ -401,6 +400,73 @@ section {
     text-align: center;
 }
 
+/*Pop up Whislist*/
+
+.popup {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display         : none;
+    justify-content : center;
+    align-items     : center;
+}
+
+.popup-content {
+    background-color: #fff;
+    font-size       : 2rem;
+    padding         : 20px;
+    border-radius   : 8px;
+    max-width       : 400px;
+    text-align      : center;
+}
+
+#close-popup {
+    margin-top: 10px;
+    font-size : 2rem;
+    background: var(--main-color);
+    padding: .5rem;
+    border: var(--border);
+}
+
+.icons button {
+    background-color: var(--bg);
+    cursor          : pointer;
+    font-size       : 2.5rem;
+}
+
+#wishlist-counter {
+    position : absolute;
+    font-size: 1.5rem;
+    top      : 29%;
+}
+
+#wishlist-header-button {
+    color: white;
+}
+
+#wishlist-header-button.has-items {
+    color: var(--main-color);
+}
+
+
+.wishlist-btn {
+    border    : var(--border);
+    background: var(--bg);
+    height    : 4.5rem;
+    width     : 6rem;
+    color     : #fff;
+    font-size : 2rem;
+    position  : absolute;
+    cursor    : pointer;
+    margin-left: 5%;
+}
+
+.wishlist-btn.added {
+    color: goldenrod;
+}
 
 /*INICIO*/
 
@@ -599,11 +665,11 @@ section {
     background   : var(--bg);
     height       : 4.5rem;
     width        : 6rem;
-    margin       : .3rem;
     color        : #fff;
     font-size    : 2rem;
     margin-bottom: .5rem;
     cursor       : pointer;
+    margin-right : 36%;
 }
 
 .products .box-container .box .add:hover {

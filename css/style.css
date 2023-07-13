@@ -182,18 +182,18 @@ section {
 }
 
 .header {
-    height         : 12.5rem;
-    background     : var(--bg);
-    display        : flex;
-    align-items    : center;
-    justify-content: space-between;
-    padding        : 1rem 7%;
-    border-bottom  : var(--border);
     position       : fixed;
-    top            : 0.75rem;
+    top            : 0;
     left           : 0;
     right          : 0;
     z-index        : 1000;
+    background     : var(--bg);
+    padding        : 1rem 7%;
+    height         : 12.5rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    border-bottom  : var(--border);
 }
 
 .header .logo img {
@@ -235,15 +235,14 @@ section {
     margin-left: 1.5rem;
 }
 
-
 .header .search-form {
     position        : absolute;
+    display         : inline-flex;
     top             : 115%;
     right           : 7%;
     background      : #fff;
-    width           : 50rem;
+    width           : 40rem;
     height          : 5rem;
-    display         : flex;
     align-items     : center;
     transform       : scaleY(0);
     transform-origin: top;
@@ -271,6 +270,27 @@ section {
 
 .header .search-form label:hover {
     color: var(--main-color);
+}
+
+#searchResults {
+    position        : absolute;
+    top             : 100%;
+    left            : 0;
+    width           : 100%;
+    margin-top      : 10px;
+    background-color: #fff;
+    padding         : 1rem;
+    font-size       : 2rem;
+}
+
+#resetButton{
+    margin: 0;
+    height: 100%;
+}
+
+#resetButton:hover{
+    letter-spacing: 0;
+    background: var(--bg);
 }
 
 .header .modal-container {
@@ -400,6 +420,8 @@ section {
     text-align: center;
 }
 
+
+
 /*Pop up Whislist*/
 
 .popup {
@@ -427,8 +449,8 @@ section {
     margin-top: 10px;
     font-size : 2rem;
     background: var(--main-color);
-    padding: .5rem;
-    border: var(--border);
+    padding   : .5rem;
+    border    : var(--border);
 }
 
 .icons button {
@@ -453,14 +475,14 @@ section {
 
 
 .wishlist-btn {
-    border    : var(--border);
-    background: var(--bg);
-    height    : 4.5rem;
-    width     : 6rem;
-    color     : #fff;
-    font-size : 2rem;
-    position  : absolute;
-    cursor    : pointer;
+    border     : var(--border);
+    background : var(--bg);
+    height     : 4.5rem;
+    width      : 6rem;
+    color      : #fff;
+    font-size  : 2rem;
+    position   : absolute;
+    cursor     : pointer;
     margin-left: 5%;
 }
 

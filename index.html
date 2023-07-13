@@ -66,14 +66,15 @@
                 <button id="close-popup">Cerrar</button>
             </div>
         </div>
-
+        <!--Barra de búsqueda-->
         <div class="search-form">
-            <input type="search" id="search-box" placeholder="Buscar..." />
-            <!--<label for="search-box" class="fas fa-search"></label>-->
-            <ul id="resultado" class="search-result">
-
-            </ul>
+            <input type="text" id="searchInput" placeholder="Buscar productos">
+            <label  class="fas fa-search" id="searchIcon"></label>
+            <button id="resetButton" class="btn" onclick="resetSearch()">Reiniciar</button>
+            <div id="searchResults"></div>
         </div>
+
+        
         <div class="modal-container" id="modal-container">
             <!--Se rellena con Js-->
         </div>
@@ -268,6 +269,7 @@
     <script src="./js/preload.js"></script>
     <script src="./js/carrito.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/search.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/scrollTop.js"></script>
     <!--Swiper JS -->

@@ -80,7 +80,6 @@ const get_products = async () => {
                             </div>
                             
                         `;
-
         shop_content.append(content);
 
         let comprar = document.createElement("button");

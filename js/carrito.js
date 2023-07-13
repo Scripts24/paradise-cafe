@@ -76,6 +76,7 @@ const get_products = async () => {
                             <div class="wishlist">
                                 <button class="wishlist-btn" data-product-id="${product.id}">
                                     <i class="fas fa-heart"></i>
+                                    
                                 </button>
                             </div>
                             

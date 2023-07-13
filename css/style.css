@@ -283,15 +283,50 @@ section {
     font-size       : 2rem;
 }
 
-#resetButton{
+#resetButton {
     margin: 0;
     height: 100%;
 }
 
-#resetButton:hover{
+#resetButton:hover {
     letter-spacing: 0;
-    background: var(--bg);
+    background    : var(--bg);
 }
+
+/*Modal detalle productos*/
+
+.modal {
+    position  : fixed;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-40%, -40%);
+    width     : 300px;
+    max-width : 90%;
+    padding   : 20px;
+    background: var(--main-color);
+    border    : var(--border);
+    z-index   : 9999;
+}
+
+.modal-content {
+    font-size : 1.5rem;
+    text-align: center;
+}
+
+#modalBody img {
+    width: 100%;
+}
+
+.close {
+    font-size: 3rem;
+    cursor   : pointer;
+    position : absolute;
+    right    : 1rem;
+    top      : 0;
+    color    : #fff;
+}
+
+/*Modal carrito*/
 
 .header .modal-container {
     position  : absolute;

@@ -66,15 +66,24 @@
                 <button id="close-popup">Cerrar</button>
             </div>
         </div>
+        
         <!--Barra de búsqueda-->
         <div class="search-form">
             <input type="text" id="searchInput" placeholder="Buscar productos">
-            <label  class="fas fa-search" id="searchIcon"></label>
+            <label class="fas fa-search" id="searchIcon"></label>
             <button id="resetButton" class="btn" onclick="resetSearch()">Reiniciar</button>
             <div id="searchResults"></div>
         </div>
-
         
+        <!--Modal detalle productos-->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close"><i class="fa-regular fa-rectangle-xmark"></i></span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+
         <div class="modal-container" id="modal-container">
             <!--Se rellena con Js-->
         </div>

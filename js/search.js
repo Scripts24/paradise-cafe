@@ -79,10 +79,22 @@ function showModal(producto) {
                 <img src="${producto.imagen}" alt="${producto.titulo}">
                 <div class="price">$ ${producto.precio}</div>
                 <p>${producto.categoria.id.toUpperCase()}</p>
+                <p>${producto.detalles}</p>
     `;
 
     // Mostrar el modal
     modal.style.display = "block";
+
+    searchIcon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        showModal();
+    });
+
+    function showModal() {
+        var modalContainer = document.getElementById("modal");
+        modalContainer.classList.remove("hidden");
+    }
+
 
     // Agregar evento de clic al botón de cerrar el modal
     closeBtn.addEventListener("click", function () {

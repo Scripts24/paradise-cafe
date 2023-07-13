@@ -73,13 +73,16 @@ const get_products = async () => {
                                 <h3>${product.titulo}</h3>
                                 <div class="price">$ ${product.precio}</div>
                             </div>
-                            <div class="wishlist">
-                                <button class="wishlist-btn" data-product-id="${product.id}">
-                                    <i class="fas fa-heart"></i>
-                                    
+                            <div class="content-buttons">
+                                <div class="wishlist">
+                                    <button class="wishlist-btn" data-product-id="${product.id}">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                                <button class="wishlist-btn btn-eye">
+                                    <i class="fa-solid fa-eye"></i>
                                 </button>
                             </div>
-                            
                         `;
         shop_content.append(content);
 
@@ -127,6 +130,12 @@ const get_products = async () => {
             save_local();
         });
 
+        //Detalles productos
+        let eyeButton = content.querySelector(".btn-eye");
+        eyeButton.addEventListener("click", () => {
+            showModal(product);
+        });
+
         let wishlistButton = content.querySelector(".wishlist-btn");
         wishlistButton.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -155,9 +164,34 @@ const get_products = async () => {
     });
 
     updateWishlistHeader()
+
 };
 
 get_products();
+
+//Detalles productos
+function showModal(product) {
+    // Obtener los elementos del modal
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal-content");
+    const modalCloseButton = document.getElementById("modal-close");
+
+    // Agregar la información del producto al contenido del modal
+    modalContent.innerHTML = `
+        <h2>${product.titulo}</h2>
+        <p>Precio: $${product.precio}</p>
+        <img src="${product.imagen}" alt="${product.titulo}" />
+        <p>${product.detalles}</p>
+    `;
+
+    // Mostrar el modal
+    modal.style.display = "block";
+
+    // Agregar evento de clic al botón de cerrar modal
+    modalCloseButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
 
 const save_local = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));

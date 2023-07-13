@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 
 :root {
     --main-color: #d3ad7f;
     --black     : #13131a;
     --bg        : #010103;
-    --border    : 0.5rem solid rgba(255, 255, 255, .3);
+    --border    : 0.5rem solid rgba(255, 255, 255, 0.3);
 }
 
 * {
-    font-family    : 'Dancing Script', cursive;
+    font-family    : "Dancing Script", cursive;
     margin         : 0;
     padding        : 0;
     box-sizing     : border-box;
@@ -28,7 +28,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-    width: .8rem;
+    width: 0.8rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -86,7 +86,6 @@ section {
     }
 }
 
-
 /* PROGRESO SCROLL */
 
 .progress-bar {
@@ -122,8 +121,8 @@ section {
 
 #progress-value {
     display         : block;
-    height          : calc(100% - .9rem);
-    width           : calc(100% - .9rem);
+    height          : calc(100% - 0.9rem);
+    width           : calc(100% - 0.9rem);
     background-color: var(--main-color);
     border-radius   : 50%;
     display         : grid;
@@ -170,7 +169,7 @@ section {
 .btn {
     margin-top: 1rem;
     display   : inline-block;
-    padding   : .9rem 3rem;
+    padding   : 0.9rem 3rem;
     font-size : 1.7rem;
     color     : #fff;
     background: var(--main-color);
@@ -178,7 +177,7 @@ section {
 }
 
 .btn:hover {
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
 }
 
 .header {
@@ -208,8 +207,8 @@ section {
 
 .header .navbar a:hover {
     color         : var(--main-color);
-    border-bottom : .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+    border-bottom : 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
 }
 
 .header .icons div {
@@ -313,6 +312,10 @@ section {
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
 #modalBody img {
     width: 100%;
 }
@@ -344,7 +347,7 @@ section {
 }
 
 .header .modal-container::-webkit-scrollbar {
-    width: .8rem;
+    width: 0.8rem;
 }
 
 .header .modal-container::-webkit-scrollbar-track {
@@ -373,7 +376,7 @@ section {
 .header .modal-container .modal-header h2 {
     margin-top   : 1rem;
     font-size    : 3rem;
-    border-bottom: .3rem solid var(--main-color);
+    border-bottom: 0.3rem solid var(--main-color);
     text-align   : center;
 }
 
@@ -396,7 +399,7 @@ section {
 
 .header .modal-container .modal-content h3 {
     font-size     : 1.3rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
 .header .modal-container .modal-content .subtotal {
@@ -426,9 +429,9 @@ section {
     display        : flex;
     justify-content: space-between;
     align-items    : center;
-    gap            : .7rem;
-    border         : .2rem solid var(--main-color);
-    padding        : 0 .5rem;
+    gap            : 0.7rem;
+    border         : 0.2rem solid var(--main-color);
+    padding        : 0 0.5rem;
 }
 
 .header .modal-container .modal-content .decrease {
@@ -451,11 +454,9 @@ section {
 
 .modal-container .total-content {
     font-size : 2.5rem;
-    border-top: .3rem solid var(--main-color);
+    border-top: 0.3rem solid var(--main-color);
     text-align: center;
 }
-
-
 
 /*Pop up Whislist*/
 
@@ -484,7 +485,7 @@ section {
     margin-top: 10px;
     font-size : 2rem;
     background: var(--main-color);
-    padding   : .5rem;
+    padding   : 0.5rem;
     border    : var(--border);
 }
 
@@ -508,6 +509,11 @@ section {
     color: var(--main-color);
 }
 
+.content-buttons {
+    display    : inline-flex;
+    margin-left: 32%;
+    position   : absolute;
+}
 
 .wishlist-btn {
     border     : var(--border);
@@ -516,9 +522,8 @@ section {
     width      : 6rem;
     color      : #fff;
     font-size  : 2rem;
-    position   : absolute;
     cursor     : pointer;
-    margin-left: 5%;
+    margin-left: 0.3rem;
 }
 
 .wishlist-btn.added {
@@ -602,7 +607,6 @@ section {
     margin   : 1rem 0;
 }
 
-
 /*NOSOTROS*/
 
 .about .row {
@@ -684,7 +688,7 @@ section {
     z-index          : 10;
     width            : 100%;
     height           : 100%;
-    stroke-width     : .4rem;
+    stroke-width     : 0.4rem;
     stroke           : #fff;
     fill             : none;
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
@@ -724,9 +728,9 @@ section {
     width        : 6rem;
     color        : #fff;
     font-size    : 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     cursor       : pointer;
-    margin-right : 36%;
+    margin-right : 67%;
 }
 
 .products .box-container .box .add:hover {
@@ -871,8 +875,8 @@ section {
 .footer .social a {
     font-size: 2rem;
     color    : #fff;
-    margin   : .3rem;
-    padding  : .7rem;
+    margin   : 0.3rem;
+    padding  : 0.7rem;
 }
 
 .footer .social a:hover {
@@ -888,7 +892,7 @@ section {
 }
 
 .footer .links a {
-    padding  : .7rem 2rem;
+    padding  : 0.7rem 2rem;
     color    : #fff;
     font-size: 2rem;
 }
@@ -917,8 +921,7 @@ section {
 
 /*MEDIA QUERIES*/
 
-@media (max-width:991px) {
-
+@media (max-width: 991px) {
     html {
         font-size: 55%;
     }
@@ -930,11 +933,9 @@ section {
     section {
         padding: 2rem;
     }
-
 }
 
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
     #menu-btn {
         display: inline-block;
     }
@@ -968,7 +969,7 @@ section {
     .home {
         background-position: left;
         justify-content    : center;
-        text-align         : center
+        text-align         : center;
     }
 
     .home .content h3 {
@@ -986,9 +987,7 @@ section {
     }
 }
 
-
 @media (max-width: 500px) {
-
     .swiper-slide {
         width : 15rem;
         height: 10rem;
@@ -1005,8 +1004,7 @@ section {
     }
 }
 
-@media (max-width:450px) {
-
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }

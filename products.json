@@ -4,6 +4,7 @@
         "id": "cafe-1",
         "titulo": "Capuccino",
         "imagen": "./img/products/capuccino.jpg",
+        "detalles": "Preparado con café expreso y leche montada con vapor para darle cremosidad. Un capuchino se compone de 125 ml de leche y 25 ml de café expreso, en ocasiones se agrega cacao en polvo o canela según el gusto del consumidor.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -16,6 +17,7 @@
         "id": "cafe-2",
         "titulo": "Australiano",
         "imagen": "./img/products/australiano.jpg",
+        "detalles":"Se trata del café Specialty, que es el que ha sido debidamente tratado, desde sus orígenes (las plantaciones) hasta su elaboración en una cafetería, con una buena máquina y un barista correctamente formado.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -28,6 +30,7 @@
         "id": "cafe-3",
         "titulo": "Vienés",
         "imagen": "./img/products/viena.jpg",
+        "detalles":"Preparamos un expreso doble al gusto, más o menos fuerte, y lo azucaramos. Lo ponemos en el fondo de la taza y coronamos con la nata muy batida o montada. Espolvoreamos con canela o cacao en polvo y decoramos con un barquillo o una pasta ligera.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -38,8 +41,9 @@
 
     {
         "id": "cafe-4",
-        "titulo": "Helado",
+        "titulo": "Frappé",
         "imagen": "./img/products/helado.jpg",
+        "detalles":"Se compone de café u otro ingrediente de base (por ejemplo, crema), mezclado con hielo y otros ingredientes diversos, coronado con crema batida.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"

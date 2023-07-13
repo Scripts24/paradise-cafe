@@ -38,11 +38,19 @@ document.addEventListener("submit", (e) => {
         confirmButtonColor: "#13131a",
     }).then((result) => {
         if (result.isConfirmed) {
-            localStorage.clear()
+            localStorage.setItem("carrito", JSON.stringify([]));
             window.location.href = "../index.html";
         }
     });
-    setTimeout(() => (window.location.href = "../index.html"), 10000);
-    localStorage.clear()
+    // Limpiar el carrito después de 10 segundos
+    setTimeout(() => {
+        localStorage.setItem("carrito", JSON.stringify([]));
+    }, 10000);
+
+    // Redireccionar a la página principal después de 10 segundos
+    setTimeout(() => {
+        window.location.href = "../index.html";
+    }, 10000);
+    
 });
 

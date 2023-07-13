@@ -209,15 +209,6 @@ const isProductInWishlist = (product) => {
     return wishlist.some((wishlistProduct) => wishlistProduct.id === product.id);
 };
 
-/*const addToWishlist = (product) => {
-    wishlist.push(product);
-    saveWishlist();
-};
-
-const removeFromWishlist = (product) => {
-    wishlist = wishlist.filter((wishlistProduct) => wishlistProduct.id !== product.id);
-    saveWishlist();
-};*/
 
 const renderWishlistPopup = () => {
     const wishlistItemsContainer = document.getElementById("wishlist-items");
@@ -378,12 +369,14 @@ const pintar_carrito = () => {
     let vaciar_carrito = opciones.querySelector("#vaciar-carrito");
     if (vaciar_carrito) {
         vaciar_carrito.addEventListener("click", () => {
+            
             carrito.length = [];
-            localStorage.clear();
+            save_local();
             pintar_carrito();
             window.location.reload();
         });
     }
+
 };
 
 ver_carrito.addEventListener("click", pintar_carrito);

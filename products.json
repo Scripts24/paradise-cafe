@@ -54,8 +54,9 @@
 
     {
         "id": "cafe-5",
-        "titulo": "Inglés",
-        "imagen": "./img/products/ingles.jpg",
+        "titulo": "Macchiato",
+        "imagen": "./img/products/macchiato.jpg",
+        "detalles":" Café cortado típico de Italia que consiste en un expreso con una pequeña cantidad de leche caliente y espumada.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -68,6 +69,7 @@
         "id": "cafe-6",
         "titulo": "Irish",
         "imagen": "./img/products/irish.jpg",
+        "detalles": "Mezcla de whisky irlandés, una cucharada de azúcar y café, finalmente cubierto por dos centímetros de crema de leche o nata semimontada.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -78,8 +80,9 @@
 
     {
         "id": "cafe-7",
-        "titulo": "Liqueurs",
-        "imagen":"./img/products/liqueurs.jpg",
+        "titulo": "Cardamomo",
+        "imagen":"./img/products/cardamomo.png",
+        "detalles":"Combina vodka lavado con grasa de pistacho con un trago de espresso y un jarabe de cardamomo casero. Tres vainas de cardamomo reemplazan la guarnición clásica de granos de café.",
         "categoria": {
             "nombre": "Preparado",
             "id": "preparado"
@@ -92,6 +95,7 @@
         "id": "cafe-8",
         "titulo": "Bolivia p/ filtro",
         "imagen":"./img/products/filtro-bolivia.jpg",
+        "detalles":"Varietal: Caturra, Típica. Café tostado con buen cuerpo. Cosechado a 1413m de altura en la Región de Caranavi. Con notas frutales, pomelo dulce, y presencia de vainilla y cacao, de acidez media.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -104,6 +108,7 @@
         "id": "cafe-9",
         "titulo": "Colombia cápsulas",
         "imagen":"./img/products/capsulas-colombia.jpg",
+        "detalles": "Varietal: Caturra, Típica, Castilla. El mejor Café de especialidad para recargar tus cápsulas Caffettino.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -116,6 +121,7 @@
         "id": "cafe-10",
         "titulo": "Nicaragua cápsulas",
         "imagen":"./img/products/nicaragua.jpg",
+        "detalles":"Varietal: Javanica, Caturra. Café de intensidad media y muy aromático, fresco y alimonado. Con notas de cacao. Sutilmente floral, su aroma recuerda al limoncillo, jazmín y azhar.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -128,6 +134,7 @@
         "id": "cafe-11",
         "titulo": "Brasil molido",
         "imagen":"./img/products/brasil-molido.jpg",
+        "detalles": "Varietal: Catuai rojo. La publicación corresponde a 250 Gr. de café molido en su punto justo que te permiten hacer 50 pocillos en sistemas Nespresso.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -140,6 +147,7 @@
         "id": "cafe-12",
         "titulo": "Colombia en granos",
         "imagen":"./img/products/colombia-granos.jpg",
+        "detalles":"Varietal: Geisha. Café tostado con cuerpo ligero. Cosechado a 1900m de altura. Con acidez cítrica y notas frutales, notas florales como jazmín. Residual extendido.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -152,6 +160,7 @@
         "id": "cafe-13",
         "titulo": "Brasil intenso",
         "imagen":"./img/products/brasil-intenso.jpg",
+        "detalles":"Varietal: Catuai rojo. Café intenso con marcadas notas de cacao, muy buen aroma y cuerpo.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -164,6 +173,7 @@
         "id": "cafe-14",
         "titulo": "Bolivia en granos",
         "imagen":"./img/products/bolivia-granos.jpg",
+        "detalles":"Varietal: Catuai, Caturra, Typica. Café tostado con buen cuerpo. Cosechado a 1500m de altura. Con acidez y dulzor cítricos, pasas de uva, notas a chocolate con leche y vainilla.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"
@@ -176,6 +186,7 @@
         "id": "cafe-15",
         "titulo": "Colombia premium",
         "imagen":"./img/products/colombia-premium.jpg",
+        "detalles":"Varietal: Caturra, Típica, Castilla. Es un café intenso, con notas cítricas y muy buen cuerpo, directo de origen, en granos.",
         "categoria": {
             "nombre": "Envasado",
             "id": "envasado"

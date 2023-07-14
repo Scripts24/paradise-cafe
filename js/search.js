@@ -77,7 +77,7 @@ function showModal(producto) {
     modalTitle.textContent = producto.titulo;
     modalBody.innerHTML = `
                 <img src="${producto.imagen}" alt="${producto.titulo}">
-                <div class="price">$ ${producto.precio}</div>
+                <p>$ ${producto.precio}</p>
                 <p>${producto.categoria.id.toUpperCase()}</p>
                 <p>${producto.detalles}</p>
     `;

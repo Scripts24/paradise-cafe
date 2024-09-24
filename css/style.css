@@ -48,6 +48,11 @@ section {
     padding: 2rem 7%;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin            : 0;
+}
 
 /* PROGRESO SCROLL */
 
@@ -781,7 +786,7 @@ section {
 
 .checkout form {
     margin-top: 10rem;
-    flex      : 1 1 45rem;
+    width     : 45rem;
     padding   : 5rem 2rem;
     text-align: center;
 }

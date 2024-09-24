@@ -1,21 +1,28 @@
-
-const form = document.querySelector(".form")
+const form = document.querySelector(".form");
 
 const DateTime = luxon.DateTime;
-
 const now = DateTime.now();
 
-//Envío de formulario
+// Envío de formulario
 document.addEventListener("submit", (e) => {
-
-    const name = document.querySelector("#nombre").value;
-
     e.preventDefault();
 
+    const name = document.querySelector("#nombre").value;
     const response = document.querySelector(".contact-form-response");
 
-    // ---FETCH-----
+    // Obtener detalles del carrito del localStorage
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+    // Convertir los detalles del carrito en un string para enviarlos
+    const detallesCompra = carrito.map(item =>
+        `${item.titulo} (Cantidad: ${item.cantidad}) - Precio: ${item.precio}`
+    ).join(", ");
+
+
+    // Insertar los detalles de la compra en el campo oculto del formulario
+    document.getElementById("order-details").value = detallesCompra;
+
+    // ---FETCH-----
     fetch("https://formsubmit.co/ajax/pato.atanasoff0815@gmail.com", {
         method: "POST",
         body: new FormData(e.target)
@@ -25,11 +32,12 @@ document.addEventListener("submit", (e) => {
             console.log(json);
             response.classList.remove("none");
             form.reset();
-        })
+        });
+
+    // Mensaje de agradecimiento
     Swal.fire({
         title: `Gracias por su compra ${name}, en breve le será enviado su pedido`,
-        html: `<span class="sweet-fechas">Fecha de compra: ${now.toLocaleString()}</span>
-            `,
+        html: `<span class="sweet-fechas">Fecha de compra: ${now.toLocaleString()}</span>`,
         position: 'center',
         color: "#13131a",
         icon: 'success',
@@ -42,6 +50,7 @@ document.addEventListener("submit", (e) => {
             window.location.href = "../index.html";
         }
     });
+
     // Limpiar el carrito después de 10 segundos
     setTimeout(() => {
         localStorage.setItem("carrito", JSON.stringify([]));
@@ -51,6 +60,6 @@ document.addEventListener("submit", (e) => {
     setTimeout(() => {
         window.location.href = "../index.html";
     }, 10000);
-    
+
 });
 
